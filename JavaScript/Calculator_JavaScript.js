@@ -15,7 +15,7 @@ function Input_Digit(digit) {
     const { Display_Value, Wait_Second_Operand} = Calculator;
 
     if (Wait_Second_Operand === true) {
-        Calculator.Display_Value == digit;
+        Calculator.Display_Value = digit;
         Calculator.Wait_Second_Operand = false;
     } else {
 
@@ -40,7 +40,7 @@ function Handle_Operator(Next_Operator) {
         return;
  }
 
-if (First_Operand == null) {
+if (First_Operand === null) {
     Calculator.First_Operand = Value_of_Input;
 } else if (operator) { 
     const Value_Now = First_Operand || 0;
