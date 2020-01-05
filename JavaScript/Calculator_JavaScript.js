@@ -54,6 +54,8 @@ if (First_Operand == null) {
 Calculator.Wait_Second_Operand = true;
 Calculator.operator = Next_Operator;
 
+}
+
 
 const Perform_Calculation = {
     '/': (First_Operand, Second_Operand) => First_Operand / Second_Operand,
@@ -62,6 +64,7 @@ const Perform_Calculation = {
     '-': (First_Operand, Second_Operand) => First_Operand - Second_Operand,
     '=': (First_Operand, Second_Operand) => Second_Operand 
 };
+
 
 function Calculator_Reset() {
     Calculator.Display_Value = '0';
@@ -76,9 +79,9 @@ function Update_Display() {
 }
 
 Update_Display();
-    const keys = document.querySelector('.calulator-keys')
+    const keys = document.querySelector('.calculator-keys')
     keys.addEventListener('click', (event) => {
-    const {target} = event;
+    const { target } = event;
     if (!target.matches('button')) {
         return;
     }
@@ -103,4 +106,4 @@ if (target.classList.contains('all-clear')) {
 
 Input_Digit(target.value);
 Update_Display();
-    )}
+    })
